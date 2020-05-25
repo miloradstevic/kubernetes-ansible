@@ -4,6 +4,14 @@
   vars_files:
   - env_variables
   tasks:
+   - name: Allow Network Ports in Firewalld
+     firewalld:
+      port: "{{ item }}"
+      state: enabled
+      permanent: yes
+      immediate: yes
+     with_items: "{{ ports }}"
+ 
   - name: Pulling images required for setting up a Kubernetes cluster
     shell: kubeadm config images pull
 
