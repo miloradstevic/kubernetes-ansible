@@ -21,6 +21,3 @@ kubectl get nodes
 
 ## Reference:
 * https://medium.com/faun/how-to-create-your-own-kubernetes-cluster-using-ansible-7c6b5c031a5d
-
-
-
